@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "/Users/neilgursahani/Desktop/Ironhack/Projects/Project 1/project-module1-frog-game/css"
+		},
+		{
+			"path": "/Users/neilgursahani/Desktop/Ironhack/Projects/Project 1/project-module1-frog-game/html"
+		},
+		{
+			"path": "/Users/neilgursahani/Desktop/Ironhack/Projects/Project 1/project-module1-frog-game/images"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "/Users/neilgursahani/Desktop/Ironhack/Projects/Project 1/project-module1-frog-game/sounds"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "javascript"
+	}
+}

@@ -12,5 +12,11 @@ body {
     height: 80vh;
     width: 45vw;
     border: 1px solid #000;
+    position: relative;
 }
+
+#frog-game .frog {
+    width: 30%;
+    position: absolute;
+} 
 
