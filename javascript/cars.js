@@ -36,13 +36,13 @@ class Cars {
         $carsImg2.style.left = `${this.position[0] * 10}%`;
         $carsImg3.style.left = `${this.position[0] * 10}%`;
 
-        $carsImg.style.top = `78%`;
-        $carsImg2.style.top = `68%`;
-        $carsImg3.style.top = `58%`;
+        $carsImg.style.top = `76%`;
+        $carsImg2.style.top = `63%`;
+        $carsImg3.style.top = `50%`;
 
-        $carsImg.style.width = `10%`;
-        $carsImg2.style.width = `10%`;
-        $carsImg3.style.width = `10%`;
+        $carsImg.style.width = `12%`;
+        $carsImg2.style.width = `12%`;
+        $carsImg3.style.width = `12%`;
         
         
         $game.appendChild($carsImg);

@@ -29,30 +29,30 @@ class Game {
       
     }
 
-    // collide(frog, cars){
-    //     debugger
-    //     for(let i = 0; i < cars.length; i++){
-    //         if(frog.position[0] === cars[i].position[0] &&
-    //             frog.position[1] === cars[i].position[1]) {
-    //                 frog.splice(0,2);
-    //                 // cars.splice(i,1);
-    //                 return true;
-    //             }
-    //     }
+    // isCollide($frog, $cars) {
+    //     const $playerRect = $frog.getBoundingClientRect();
+    //     const $obstacleRect = $cars.getBoundingClientRect();
+    //     return !(
+    //         $playerRect.top + $playerRect.height < $obstacleRect.top ||
+    //         $playerRect.top > $obstacleRect.top + $obstacleRect.height ||
+    //         $playerRect.left + $playerRect.width < $obstacleRect.left ||
+    //         $playerRect.left > $obstacleRect.left + $obstacleRect.width
+    //     );
     // }
 
-    isCollide($frog, $obstacle) {
-        const $playerRect = $frog.getBoundingClientRect();
-        const $obstacleRect = $obstacle.getBoundingClientRect();
-        return !(
-            $playerRect.top + $playerRect.height < $obstacleRect.top ||
-            $playerRect.top > $obstacleRect.top + $obstacleRect.height ||
-            $playerRect.left + $playerRect.width < $obstacleRect.left ||
-            $playerRect.left > $obstacleRect.left + $obstacleRect.width
-        );
-    }
+    // isSplash($frog, $obstacle) {
+    //     const $playerRect = $frog.getBoundingClientRect();
+    //     const $obstacleRect = $obstacle.getBoundingClientRect();
+    //     return !(
+    //         $obstacleRect.top + $obstacleRect.height < $playerRect.top ||
+    //         $obstacleRect.top > $playerRect.top + $playerRect.height ||
+    //         $obstacleRect.left + $obstacleRect.width < $playerRect.left ||
+    //         $obstacleRect.left > $playerRect.left + $playerRect.width
+    //     );
+    // }
 }
 
 let game = new Game();
 game.start();
-game.collide();
+// game.isCollide();
+// game.isSplash();

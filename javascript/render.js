@@ -8,9 +8,15 @@ function renderEverything(){
 
     
 
-    if(game.isCollide(frog, cars)){
-        document.querySelector(".frog").setAttribute("src", "../images/splat-42890.svg");
-        console.log("gameover");
-        clearInterval(game.renderRef);
-    }
+    // if(game.isCollide(frog, cars)){
+    //     document.querySelector(".frog").setAttribute("src", "../images/splat-42890.svg");
+    //     console.log("gameover");
+    //     clearInterval(game.renderRef);
+    // }
+
+    // if(game.isSplash(frog, logs)){
+    //     document.querySelector(".frog").setAttribute("src", "../images/splash.png");
+    //     console.log("gameover");
+    //     clearInterval(game.renderRef);
+    // }
 }

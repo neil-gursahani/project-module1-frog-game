@@ -32,11 +32,11 @@ class Logs {
         $logsImg1.style.left = `${this.position[0] * 10}%`;
         $logsImg2.style.left = `${this.position[0] * 10}%`;
 
-        $logsImg1.style.top = `35%`;
+        $logsImg1.style.top = `30%`;
         $logsImg2.style.top = `15%`;
 
-        $logsImg1.style.width = `10%`;
-        $logsImg2.style.width = `10%`;
+        $logsImg1.style.width = `12%`;
+        $logsImg2.style.width = `12%`;
 
         $game.appendChild($logsImg1);
         $game.appendChild($logsImg2);

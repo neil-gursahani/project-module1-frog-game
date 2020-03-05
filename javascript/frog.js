@@ -45,6 +45,7 @@ class Frog {
     }
 
     moveForward() {
+        debugger
         //this.currentLocation.push(this.position); 
         switch(this.direction) {
             case "N":
@@ -132,10 +133,10 @@ class Frog {
 
 
         $frogEndPoint.setAttribute("style", "height: 10vh; width: 100%; background-color: green;");
-        $frogPond.setAttribute("style", "height: 30vh; background-color: blue;");
-        $frogGrass.setAttribute("style", "height: 10vh; background-color: green;");
-        $frogRoad.setAttribute("style", "height: 30vh; background-color: grey;");
-        $frogStartingPoint.setAttribute("style", "height: 10vh; background-color: green;");
+        $frogPond.setAttribute("style", "height: 23vh; background-color: blue;");
+        $frogGrass.setAttribute("style", "height: 12.5vh; background-color: green;");
+        $frogRoad.setAttribute("style", "height: 33vh; background-color: grey;");
+        $frogStartingPoint.setAttribute("style", "height: 11vh; background-color: green;");
     
             switch(this.direction){
                 case "N":
