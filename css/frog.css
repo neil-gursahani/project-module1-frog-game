@@ -9,14 +9,46 @@ body {
 }
 
 #frog-game {
-    height: 80vh;
-    width: 45vw;
-    border: 1px solid #000;
+    width: 100%;
     position: relative;
 }
 
 #frog-game .frog {
-    width: 30%;
+    width: 20%;
     position: absolute;
 } 
+
+.frog-game {
+    /* border: 0.1px solid black; */
+    width: 45vw;
+}
+
+.ending-point {
+    height: 10vh;
+    background-color: green;
+}
+
+.pond {
+    height: 30vh;
+    background-color: blue;
+}
+
+.grass {
+    height: 10vh;
+    background-color: green;
+}
+
+.road {
+    height: 30vh;
+    background-color: grey;
+}
+
+.starting-point {
+    height: 10vh;
+    background-color: green;
+}
+
+.cars1, .cars2, .cars3, .logs1, .logs2 {
+    position: absolute;
+}
 

@@ -48,30 +48,30 @@ class Frog {
         //this.currentLocation.push(this.position); 
         switch(this.direction) {
             case "N":
-                if (this.position[1] === 0) {
-                    console.log("Cannot move more forward!");
-                } else {
+                // if (this.position[1] === 0) {
+                //     console.log("Cannot move more forward!");
+                // } else {
                     this.position[1]--;
-                }
+                // }
                 break;
             case "S":
-                if (this.position[1] === 14) {
-                    console.log("Cannot move more forward!");
-                } else {
+                // if (this.position[1] === 14) {
+                //     console.log("Cannot move more forward!");
+                // } else {
                     this.position[1]++;
-                }
+                // }
             case "E":
-                if (this.position[0] === 0) {
-                    console.log("Cannot move more forward!");
-                } else {
+                // if (this.position[0] === 0) {
+                //     console.log("Cannot move more forward!");
+                // } else {
                     this.position[0]++;
-                }
+                // }
             case "W":
-                if (this.position[0] === 16) {
-                    console.log("Cannot move more forward!")
-                } else {
+                // if (this.position[0] === 16) {
+                //     console.log("Cannot move more forward!")
+                // } else {
                     this.position[0]--;
-                }
+                // }
             default: 
                 console.log("Incorrect moving forward input.")
         }
@@ -82,62 +82,60 @@ class Frog {
 
         switch(this.direction) {
             case "N":
-                if (this.position[1] === 14) {
-                    console.log("Cannot move more backward!");
-                } else {
+                // if (this.position[1] === 14) {
+                //     console.log("Cannot move more backward!");
+                // } else {
                     this.position[1]++;
-                }
+                // }
                 break;
             case "S":
-                if (this.position[1] === 0) {
-                    console.log("Cannot move more backward!");
-                } else {
+                // if (this.position[1] === 0) {
+                //     console.log("Cannot move more backward!");
+                // } else {
                     this.position[1]--;
-                }
+                // }
             case "E":
-                if (this.position[0] === 16) {
-                    console.log("Cannot move more backward!");
-                } else {
+                // if (this.position[0] === 16) {
+                //     console.log("Cannot move more backward!");
+                // } else {
                     this.position[0]--;
-                }
+                // }
             case "W":
-                if (this.position[0] === 0) {
-                    console.log("Cannot move more backward!")
-                } else {
+                // if (this.position[0] === 0) {
+                //     console.log("Cannot move more backward!")
+                // } else {
                     this.position[0]++;
-                }
+                // }
             default: 
                 console.log("Incorrect moving backward input.")
         }
         
     }
 
-    // moveUp(person) {
-    //     let topPosition = window.getComputedStyle(person).getPropertyValue('top')
-    //     if (person.style.top === "0px") {
-    //         return
-    //     } else {
-    //         let position = parseInt(topPosition)
-    //         position -= 30
-    //         person.style.top = `${position}px`
-    //     }
-    // }
-    // moveDown(person) {
-    //     let topPosition = window.getComputedStyle(person).getPropertyValue('top')
-    //     if ((fromPxToNumber(person.style.top) + person.height) >= window.innerHeight) {
-    //         return
-    //     } else {
-    //         let position = parseInt(topPosition)
-        
-    //         position += 30
-    //         person.style.top = `${position}px`
-    //     }
-    // }
-
     render(){
         let $game = document.getElementById("frog-game")
         let $frogImg = document.createElement("img");
         $frogImg.setAttribute("class", "frog");
+        $frogImg.setAttribute("id", "frog-id");
+
+        let $frogEndPoint = document.createElement("div");
+        let $frogPond = document.createElement("div");
+        let $frogGrass = document.createElement("div");
+        let $frogRoad = document.createElement("div");
+        let $frogStartingPoint = document.createElement("div");
+
+        $frogEndPoint.setAttribute("class", "ending-point");
+        $frogPond.setAttribute("class", "pond");
+        $frogGrass.setAttribute("class", "grass");
+        $frogRoad.setAttribute("class", "road");
+        $frogStartingPoint.setAttribute("class", "starting-point");
+
+
+        $frogEndPoint.setAttribute("style", "height: 10vh; width: 100%; background-color: green;");
+        $frogPond.setAttribute("style", "height: 30vh; background-color: blue;");
+        $frogGrass.setAttribute("style", "height: 10vh; background-color: green;");
+        $frogRoad.setAttribute("style", "height: 30vh; background-color: grey;");
+        $frogStartingPoint.setAttribute("style", "height: 10vh; background-color: green;");
     
             switch(this.direction){
                 case "N":
@@ -156,11 +154,16 @@ class Frog {
                     console.log("Direction unkown");
             }
 
-    
-        $frogImg.style.left = `${(this.position[0] * (100/16)) - (200/16)}%`;
-        $frogImg.style.top = `${(this.position[1] * (100/14)) - 200/14}%`;
+        $frogImg.style.left = `${(this.position[0] * 6)}%`;
+        $frogImg.style.top = `${(this.position[1] * 12.8)}%`;
+        $frogImg.style.width = `5%`;
     
         $game.appendChild($frogImg);
+        $game.appendChild($frogEndPoint);
+        $game.appendChild($frogPond);
+        $game.appendChild($frogGrass);
+        $game.appendChild($frogRoad);
+        $game.appendChild($frogStartingPoint);
     }
         
 }

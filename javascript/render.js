@@ -1,11 +1,16 @@
 function renderEverything(){
-    let frog = game.frog;
-    let cars = game.cars;
+    // let frog = game.frog;
+    let frog = document.querySelector("#frog-id");
+    // let cars = game.cars;
+    let cars = document.querySelector("#cars-id");
     let logs = game.logs;
     let turtles = game.turtles;
 
-    // if(game.collide(frog, cars)){
-    //     document.querySelector(".frog").setAttribute("src", "../images/splat-42890.svg")
-    //     clearInterval(game.renderRef);
-    // }
+    
+
+    if(game.isCollide(frog, cars)){
+        document.querySelector(".frog").setAttribute("src", "../images/splat-42890.svg");
+        console.log("gameover");
+        clearInterval(game.renderRef);
+    }
 }
