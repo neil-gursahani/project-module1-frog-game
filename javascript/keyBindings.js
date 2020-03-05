@@ -7,24 +7,25 @@ document.addEventListener("keydown", function(event) {
             console.log("Left key.")
             break;
         case "ArrowUp": 
-            // debugger
             if (game.frog.position[0] !== 0 && game.frog.position[0] !== 16 && game.frog.position[1] !== 0 && game.frog.position[1] !== 8) 
             {
-                // debugger
                 game.frog.moveForward();    
             } else {
-                // debugger
-                return;
+                console.log("cannot do this.")
             }
             
-            console.log("Forward key.")
+            // console.log("Forward key.")
             break;
         case "ArrowRight": 
             game.frog.turnRight(); 
             console.log("Right key.")
             break;
-        case "ArrowDown": 
-            game.frog.moveBackward(); 
+        case "ArrowDown":
+            if (game.frog.position[0] !== 0 && game.frog.position[0] !== 16 && game.frog.position[1] !== 0 && game.frog.position[1] !== 8) { 
+                game.frog.moveBackward(); 
+        } else {
+            console.log("cannot do this.");
+        }
             console.log("Backward key.")
             break;
         default:

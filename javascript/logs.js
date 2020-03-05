@@ -8,7 +8,7 @@ class Logs {
     animateFloatingLeft() {
         setInterval(()=> {
             this.position[0] -= 1;
-        }, 500)
+        }, 800)
     }
 
     // animateFloatingRight() {
@@ -32,14 +32,16 @@ class Logs {
         $logsImg1.style.left = `${this.position[0] * 10}%`;
         $logsImg2.style.left = `${this.position[0] * 10}%`;
 
-        $logsImg1.style.top = `30%`;
+        $logsImg1.style.top = `28%`;
         $logsImg2.style.top = `15%`;
 
-        $logsImg1.style.width = `12%`;
-        $logsImg2.style.width = `12%`;
+        $logsImg1.style.width = `14%`;
+        $logsImg2.style.width = `14%`;
 
         $game.appendChild($logsImg1);
         $game.appendChild($logsImg2);
+
+        
 
 
         // $logsImg.style.left = `${this.position[0] * 10}%`;

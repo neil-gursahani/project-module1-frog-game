@@ -45,72 +45,41 @@ class Frog {
     }
 
     moveForward() {
-        debugger
-        //this.currentLocation.push(this.position); 
         switch(this.direction) {
-            case "N":
-                // if (this.position[1] === 0) {
-                //     console.log("Cannot move more forward!");
-                // } else {
-                    this.position[1]--;
-                // }
+            case "N": 
+                this.position[1]--;
                 break;
-            case "S":
-                // if (this.position[1] === 14) {
-                //     console.log("Cannot move more forward!");
-                // } else {
-                    this.position[1]++;
-                // }
-            case "E":
-                // if (this.position[0] === 0) {
-                //     console.log("Cannot move more forward!");
-                // } else {
-                    this.position[0]++;
-                // }
-            case "W":
-                // if (this.position[0] === 16) {
-                //     console.log("Cannot move more forward!")
-                // } else {
-                    this.position[0]--;
-                // }
+            case "S": 
+                this.position[1]++;
+                break;
+            case "E": 
+                this.position[0]++;
+                break;
+            case "W": 
+                this.position[0]--;
+                break;
             default: 
                 console.log("Incorrect moving forward input.")
         }
     }
 
     moveBackward() {
-        //this.position.push(this.position); 
-
         switch(this.direction) {
-            case "N":
-                // if (this.position[1] === 14) {
-                //     console.log("Cannot move more backward!");
-                // } else {
-                    this.position[1]++;
-                // }
+            case "N": 
+                this.position[1]++;
                 break;
-            case "S":
-                // if (this.position[1] === 0) {
-                //     console.log("Cannot move more backward!");
-                // } else {
-                    this.position[1]--;
-                // }
-            case "E":
-                // if (this.position[0] === 16) {
-                //     console.log("Cannot move more backward!");
-                // } else {
-                    this.position[0]--;
-                // }
-            case "W":
-                // if (this.position[0] === 0) {
-                //     console.log("Cannot move more backward!")
-                // } else {
-                    this.position[0]++;
-                // }
+            case "S": 
+                this.position[1]--;
+                break;
+            case "E": 
+                this.position[0]--;
+                break;
+            case "W": 
+                this.position[0]++;
+                break;
             default: 
                 console.log("Incorrect moving backward input.")
         }
-        
     }
 
     render(){

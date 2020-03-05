@@ -8,7 +8,7 @@ class Cars {
     animateDrivingLeft() {
         setInterval(()=> {
             this.position[0] -= 1;
-        }, 600)
+        }, 500)
     }
 
     // animateDrivingRight() {
