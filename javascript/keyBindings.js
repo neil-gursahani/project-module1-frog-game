@@ -1,6 +1,7 @@
 //this file is good
 
 document.addEventListener("keydown", function(event) {
+    console.log(`The frog's position: ${game.frog.position}`);   
     switch (event.code) {
         case "ArrowLeft": 
             game.frog.turnLeft(); 
@@ -9,12 +10,10 @@ document.addEventListener("keydown", function(event) {
         case "ArrowUp": 
             if (game.frog.position[0] !== 0 && game.frog.position[0] !== 16 && game.frog.position[1] !== 0 && game.frog.position[1] !== 8) 
             {
-                game.frog.moveForward();    
+                game.frog.moveForward(); 
             } else {
                 console.log("cannot do this.")
             }
-            
-            // console.log("Forward key.")
             break;
         case "ArrowRight": 
             game.frog.turnRight(); 

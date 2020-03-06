@@ -109,16 +109,16 @@ class Frog {
     
             switch(this.direction){
                 case "N":
-                    $frogImg.setAttribute("src", "../images/frog-forward.png");
+                    $frogImg.setAttribute("src", "./images/frog-forward.png");
                     break;
                 case "W":
-                    $frogImg.setAttribute("src", "../images/frog-left.png");
+                    $frogImg.setAttribute("src", "./images/frog-left.png");
                     break;
                 case "S":
-                    $frogImg.setAttribute("src", "../images/frog-backward.png");
+                    $frogImg.setAttribute("src", "./images/frog-backward.png");
                     break;
                 case "E":
-                    $frogImg.setAttribute("src", "../images/frog-right.png");
+                    $frogImg.setAttribute("src", "./images/frog-right.png");
                     break;
                 default:
                     console.log("Direction unkown");

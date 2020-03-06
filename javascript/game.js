@@ -1,10 +1,9 @@
 class Game {
     constructor(){
         this.frog = new Frog([8,7]);
-        this.cars = new Cars([14,14]);
+        this.cars = [new Cars([11,14])];
         this.turtles = new Turtles([14,9]);
-        this.logs = new Logs([14,8]);
-        
+        this.logs = new Logs([11,2]);
     }
 
     start(){
@@ -12,26 +11,27 @@ class Game {
             let $game = document.getElementById("frog-game");
             $game.innerHTML = "";
             this.frog.render();
-            this.cars.render();
+            this.cars[0].render();
             this.logs.render();
         
-            // for(let i = 0; i < this.cars.length; i++) {
-            //     this.cars[i].render();
-            // }
-            for(let i = 0; i < this.logs.length; i++) {
-                this.logs[i].render();
-            }
-            for(let i = 0; i < this.turtles.length; i++) {
-                this.turtles[i].render();
-            }
             renderEverything()
-        }, 10)
+        }, 100)
       
     }
 
-    isCollide($frog, $cars) {
-        const $playerRect = $frog.getBoundingClientRect();
-        const $obstacleRect = $cars.getBoundingClientRect();
+    reRendered(){
+        setInterval(() => {
+            debugger
+            this.cars.push(new Cars([14,14]));
+            this.cars[this.cars.length-1].render();
+            this.render();
+        }, 300);
+
+    }
+    
+    isCollide(frogImage, obstacleImage) {
+        const $playerRect = frogImage.getBoundingClientRect();
+        const $obstacleRect = obstacleImage.getBoundingClientRect();
         return !(
             $playerRect.top + $playerRect.height < $obstacleRect.top ||
             $playerRect.top > $obstacleRect.top + $obstacleRect.height ||
@@ -40,24 +40,26 @@ class Game {
         );
     }
 
-    isSplash($frog, $logs) {
-        debugger
-        if ($frog.position[0] !== $logs.position[0] && $frog.position[1] !== $logs.position[1]) {
+    // isSplash($frog, $logs) {
+    //     debugger
+    //     if ($frog.position[0] !== $logs.position[1] && $frog.position[1] !== $logs.position[0]) {
             
-        } if ($frog.position[0] >= 0 && $frog.position[0] <=16 && $frog.position[1] >= 1 && $frog.position[1] <= 2) {
-            document.querySelector(".frog").setAttribute("src", "../images/splash.png");
-            console.log("gameover");
-            clearInterval(game.renderRef);
+    //     } if ($frog.position[0] >= 0 && $frog.position[0] <=16 && $frog.position[1] >= 1 && $frog.position[1] <= 2) {
+    //         document.querySelector(".frog").setAttribute("src", "./images/splash.png");
+    //         console.log("gameover");
+    //         clearInterval(game.renderRef);
+    //         // clearInterval(game.cars.renderReferenceRepeated);
 
-        }
-        else {
-            console.log("The frog jumped on the log.")
-        }
+    //     }
+    //     else {
+    //         // console.log("The frog jumped on the log.")
+    //     }
 
-    }
+    // }
 }
 
 let game = new Game();
 game.start();
-game.isCollide(game.cars);
-game.isSplash(game.frog);
+// game.reRendered();
+// game.isCollide(game.frog, game.cars);
+// game.isSplash(game.frog);
