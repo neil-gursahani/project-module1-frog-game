@@ -13,7 +13,6 @@ class Cars {
     }
 
     render(){
-        // console.log("first render fn")
         let $game = document.getElementById("frog-game")
         let $carsImg = document.createElement("img");
         let $carsImg2 = document.createElement("img");

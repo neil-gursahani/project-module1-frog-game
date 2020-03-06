@@ -12,12 +12,6 @@ class Logs {
         }, 800)
     }
 
-    // animateFloatingRight() {
-    //     setInterval(()=> {
-    //         this.position[0] += 1;
-    //     }, 500)
-    // }
-
     render(){
         let $game = document.getElementById("frog-game")
         let $logsImg1 = document.createElement("img");
@@ -41,17 +35,6 @@ class Logs {
 
         $game.appendChild($logsImg1);
         $game.appendChild($logsImg2);
-
-        // setTimeout(function() {
-        //     $game.appendChild($logsImg2);
-        // }, 2000)
-
-
-        
-
-
-        // $logsImg.style.left = `${this.position[0] * 10}%`;
-        // $logsImg.style.top = `${this.position[1] * 10}%`;
 
     }
 }

@@ -137,5 +137,3 @@ class Frog {
     }
         
 }
-
-let $frogImg = document.createElement("img");
